@@ -25,6 +25,7 @@ The popular online video game GeoGuessr, in essence gamifies this process for hu
 
 #### Tools:
  1. A handy GUI tool for downloading google street view data (BYO api key) using QT5
+![gui_tool](./docs/gitembeds/tool_dler_gui.png)
  2. A handy tool to generate evenly distributed geolocation data for streetview images (as even as we can be given the obvious topologicial challenges
 
 
