@@ -44,3 +44,7 @@ The popular online video game GeoGuessr, in essence gamifies this process for hu
 
 
 
+#### frontend:
+ 1. React frontend for uploading images to the model (rather to a rest API hosted on code you'll find in /server/)
+ 2. Some fun and fancy css!
+
