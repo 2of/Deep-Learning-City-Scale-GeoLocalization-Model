@@ -3,8 +3,7 @@ This is the repo for the capstone MAI project for the University of Canterbury 2
 
 
 
-
-## The Business Section
+## Geolocalization ? What is that? Locating Rocks?
 
 This repo contains the tools, code, model and a small sample of training data (obfuscated) for building the model, as well as evaluative tools and results information. 
 
@@ -17,6 +16,33 @@ This repo contains the tools, code, model and a small sample of training data (o
 </p>
 
 
+
+
+
+## How and Why People Play GeoGuessr
+
+GeoGuessr is an online geography game that challenges players to identify locations based on Google Street View images. You are dropped into a random location somewhere in the world, and your task is to figure out where you are. The cognintive process for making a guess is typically one where the player recursively shrinks their candidate location pool (as a classificiation or a regression) based on decreasingly verbose image features. I.e. they *narrow down* the places they could be!
+
+### The Rough Process of Making a Guess:
+
+1. **Start the Game**: You're placed somewhere in the world with no context.
+2. **Analyze Clues**:
+   - **Road Signs**: Look for street signs, language, and text. Often, the language will give away the continent or country.
+   - **Landmarks**: Recognizable buildings, monuments, or natural formations can help you pinpoint your location.
+   - **Nature**: The type of vegetation or climate (tropical forests, deserts, mountains) can give you clues about your region.
+   - **Road Features**: Observing things like road markings, vehicle types, or even which side of the road people are driving on can help narrow it down.
+3. **Make Your Guess**: Drag a pin on the world map to where you think the location is. The closer your guess, the higher your score.
+4. **Compare Your Score**: Each round gives you a score based on how close you are to the actual location. The goal is to get as many points as possible across multiple rounds.
+
+### People can be *absurdly* good at GeoGuessr
+
+<p style="text-align: center;">
+  <a href="https://www.youtube.com/watch?v=PeXvpxPj1mo" target="_blank" style="position: relative; display: inline-block;">
+    <img src="https://img.youtube.com/vi/PeXvpxPj1mo/hqdefault.jpg" alt="Watch this video" style="border: 3px solid #ddd; border-radius: 8px; width: 200px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);">
+  </a>
+</p>
+
+### and it turns out, so can deep learning (although with more electricity and less caffeine) 
 
 ## What's in the repo?
 Everything you need to build out your own GeoInformer is in here (or will be added) you'll need to BYO API key for google streetview. A few images are in /data for the purpose of validation
