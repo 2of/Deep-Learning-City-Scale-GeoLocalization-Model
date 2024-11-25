@@ -164,3 +164,6 @@ Text is a **critical geolocator** in this project! We use **docTR** for **OCR** 
 
 
 TODO: FINISH THIS
+
+
+*I asked an LLM to add emojis to this, I've noticed it's gone hard on the language too. Oh well :) It's fun, I guess?*
