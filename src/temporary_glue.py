@@ -21,8 +21,8 @@
 ##############################################
 
 
-# This file is just for validation and messing about!
 
+# This file is just for validation and messing about, esnurign crap works
 # Load in images:
 
 
@@ -36,7 +36,7 @@ from ingest.inputWrapper import inputWrapper
 # Import the loss functions from modeltools.loss
 from modeltools.loss import haversine_loss_batch, haversine_loss_single
 from colour.hsv_to_tensor import hsv_histogram_batch, convert_to_embedding
-
+from obj_detection.yolowrapper import YoloWrapper
 
 
 csv_path = os.path.join(current_directory, 'res/samplestreetviews/index.csv')
@@ -66,4 +66,6 @@ embedding = convert_to_embedding(hist_tensor, embedding_dim=128)
 print("SHAPE OF embedd'd TENSOR")
 print(embedding.shape)
 
+print(embedding)
+print("now let's run some OCR on one of those tensors")
 
