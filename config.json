@@ -1,0 +1,27 @@
+{
+    "cities": {
+        "Chicago": {
+            "city": "Chicago",
+            "latitude": 41.8781,
+            "longitude": -87.6298,
+            "timezone": "America/Chicago",
+            "shapefile_place_name": "Chicago, Illinois, USA"
+        },
+        "New York": {
+            "city": "New York",
+            "latitude": 40.730610,
+            "longitude": -73.935242,
+            "timezone": "America/New_York",
+            "shapefile_place_name": "New York, New York, USA"
+        },
+        "Christchurch": {
+            "city": "Christchurch",
+            "latitude": -43.5321,
+            "longitude": 172.6362,
+            "timezone": "Pacific/Auckland",
+            "shapefile_place_name": "Christchurch, Canterbury, New Zealand"
+        }
+    },
+    "radius": 10,
+    "density_m": 2
+}

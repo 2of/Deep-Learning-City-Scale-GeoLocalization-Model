@@ -31,6 +31,44 @@ GeoGuessr is an online geography game where you guess locations based on Google 
 This project takes that concept and turns it into a **GeoGuessr Bot**! 🚀 It uses **deep learning** to make geolocation predictions from street-level images. It's like turning **Google Street View** into a giant treasure map, and this bot is your trusty guide! 🗺
 
 ---
+## The todo section
+
+1. Include yolo and conversion code
+2. Include doctor code
+3. store the extracted info as it's own tensor (this one is pending actually receving some SSD's from the mail...)
+4. The project
+5. Overleaf for proj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 💻 Installation and Setup 💻
 
@@ -164,3 +202,6 @@ Text is a **critical geolocator** in this project! We use **docTR** for **OCR** 
 
 
 TODO: FINISH THIS
+
+
+*I asked an LLM to add emojis to this, I've noticed it's gone hard on the language too. Oh well :) It's fun, I guess?*

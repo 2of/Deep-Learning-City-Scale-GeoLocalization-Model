@@ -1,0 +1,7 @@
+#files to ignore
+KEYS.json
+
+
+#dirs to ignore
+data/
+cache/
