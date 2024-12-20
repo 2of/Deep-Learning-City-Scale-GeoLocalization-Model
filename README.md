@@ -146,15 +146,10 @@ The popular game **GeoGuessr** gamifies this concept by challenging players to g
 
 ---
 
-### 🔧 Approach
+### 🔧 Data Procurement
 
-We’re using **cutting-edge AI techniques** for this project:
+Everything comes from the illustrious google streetview.
 
-- **Object Detection**: Using YOLO for real-time object detection. 🧐
-- **Text Extraction**: Leveraging **docTR** for robust text extraction. 📝
-- **Color Extraction**: Custom algorithms for **HSV color space analysis**. 🌈
-
-These features are combined into a **GeoLocalization Pattern**, which is passed through an attention model to make more accurate predictions. 🌍
 
 ---
 
