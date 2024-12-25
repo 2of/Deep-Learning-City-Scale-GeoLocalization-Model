@@ -4,7 +4,7 @@ import plotly.express as px
 import pandas as pd
 
 # Chicago city center latitude and longitude
-lat, lon = 40.7128, -74.0060
+lat, lon = 42.29863521978824, -83.12654700254598,
 radius = 2  # 8 km radius in meters
 
 # Create a GeoDataFrame with a Point representing the city center

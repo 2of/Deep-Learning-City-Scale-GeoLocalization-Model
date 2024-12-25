@@ -6,3 +6,5 @@ KEYS.json
 data/
 cache/
 runs/
+downloads/
+downloaded_images/
