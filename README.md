@@ -92,6 +92,25 @@ This project takes that concept and turns it into a **GeoGuessr Bot**! 🚀 It u
 
 ---
 
+
+## 🎨 Implementation 🎨
+
+- Okay so technically, we PREPROCESS the data separately to extract the features we train on. Pytorch <-> tf is a trouble.
+
+- we do not do this in the forward pass / prediction; there we use the combined model.
+
+- For training however, it saves a *LOT* of compute if we can use that.
+
+- 
+
+- 🌍 Geolocation prediction from Google Street View images.
+- 🧠 Deep learning model utilizing image features, object detection, and text extraction.
+- 🔧 Tools for downloading and processing street view data.
+
+---
+
+
+
 ## 📝 License 📝
 
 The project is licensed under **[License Name]**. Check the `LICENSE` file for full details.
