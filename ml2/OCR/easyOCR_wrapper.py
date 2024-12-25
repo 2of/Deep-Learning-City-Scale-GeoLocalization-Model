@@ -1,7 +1,7 @@
 import easyocr
 
 # Initialize the EasyOCR reader
-reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en'], gpu=True)
 
 # Read text from an image
 results = reader.readtext('sample_data/samplestreetviews/turkey.jpeg')
@@ -14,7 +14,7 @@ print(detected_texts)
 
 class EasyOCRWrapper():
     def __init__(self):
-        self.reader = easyocr.Reader(['en'])
+        self.reader = reader = easyocr.Reader(['en'], gpu=True)
     
     
     def predict(self,image):

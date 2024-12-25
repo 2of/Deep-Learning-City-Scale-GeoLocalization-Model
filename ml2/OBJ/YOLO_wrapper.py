@@ -15,7 +15,7 @@ class YOLOWrapper:
         # Retrieve class names from the model
         self.class_names = self.model.names
 
-    def predict(self, image, andshow=True):
+    def predict(self, image, andshow=False):
         # Perform prediction on the image
         # This is a placeholder implementation
         # Replace with actual prediction code
