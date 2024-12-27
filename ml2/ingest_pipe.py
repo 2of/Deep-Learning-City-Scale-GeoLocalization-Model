@@ -6,7 +6,9 @@ import os
 from PIL import Image
 import io
 
-
+df = pd.read_pickle('./data/GeoJSON/chicago.pkl')
+print("LOADED DF ")
+print(df)
 BATCH_SIZE = 25
 YOLO = YOLOWrapper(model_path="./models/yolo11n.pt")
 EOCR = EasyOCRWrapper()

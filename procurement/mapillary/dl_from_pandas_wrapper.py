@@ -3,7 +3,7 @@ from download import download_image
 import json
 import sys
 
-BATCH = 100
+BATCH = 200
 
 # Path to the .pkl file
 file_path = './data/GeoJSON/image_data_chicago.pkl'
@@ -55,6 +55,6 @@ for i in range(num_rows // BATCH + (1 if num_rows % BATCH != 0 else 0)):  # Incl
     print("from ", batch_start, " - to - " ,batch_end)
     # Save the DataFrame after each batch
     df.to_pickle(file_path)  # Update the .pkl file after processing the batch
-    if i >= 20:
-        sys.exit()
+    # if i >= 20:
+    #     sys.exit()
 print("Processing complete.")
