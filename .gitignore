@@ -5,6 +5,7 @@ KEYS.json
 #dirs to ignore
 data/
 cache/
+datasets/
 runs/
 downloads/
 downloaded_images/

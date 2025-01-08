@@ -219,3 +219,21 @@ TODO: FINISH THIS
 
 
 *I asked an LLM to add emojis to this, I've noticed it's gone hard on the language too. Oh well :) It's fun, I guess?*
+
+
+
+
+
+
+
+
+
+
+
+# Used libs and data: 
+
+
+https://www.kaggle.com/datasets/andrewmvd/road-sign-detection?resource=download
+for trainign yolo for this
+
+
