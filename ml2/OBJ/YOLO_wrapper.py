@@ -21,14 +21,13 @@ class YOLOWrapper:
     def predict(self, image, andshow=False, andshowfromBB=True):
         transform = T.Compose([T.ToTensor()]) 
         image_tensor = transform(image).unsqueeze(0)
+        
+        # Suppress print statements from self.model
+        sys.stdout = open(os.devnull, 'w')
         results = self.model(image_tensor)
+        sys.stdout = sys.__stdout__
 
         bounding_boxes, labels = self.get_bounding_boxes_from_results(results)
-        # print("Bounding Boxes Coordinates:")
-        # for i, box in enumerate(bounding_boxes):
-        #     print(f"Box {i+1}: {box}")
-        
-        # print("Results:", results)
 
         if andshow:
             for result in results:
@@ -56,7 +55,7 @@ class YOLOWrapper:
         transform = T.Compose([T.ToTensor()]) 
         image_tensor = transform(image).unsqueeze(0)
 
-        # Ensure the input shape is divisible by stride 32
+        # Ensure the input shape is divisible by stride 32!!!~
         _, _, h, w = image_tensor.shape
         stride = 32
         if h % stride != 0 or w % stride != 0:
@@ -69,7 +68,7 @@ class YOLOWrapper:
         results = self.model(image_tensor, conf=self.conf_threshold)
         # Print the number of items detected
         num_detections = len(results[0].boxes)
-        print(f"Number of items detected: {num_detections}")
+        # print(f"Number of items detected: {num_detections}")
         if num_detections == 0: 
             return (None, None, None)
         # Get bounding boxes and labels from YOLO model

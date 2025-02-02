@@ -9,25 +9,28 @@ class HISTOGRAM_WRAPPER:
     def __init__(self):
         pass
         
+
+
     def compute_histogram(self, image):
         """
-        Compute the color histogram of an image.
+        Compute the color histogram of an image and normalize it.
         
         Args:
             image (numpy.ndarray): The input image.
         
         Returns:
-            dict: A dictionary containing histograms for each color channel.
+            dict: A dictionary containing normalized histograms for each color channel.
         """
         # Convert image to RGB if it's not already
         if image.shape[2] == 4:  # If the image has an alpha channel
             image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
         
-        # Compute the histogram for each color channel
+        # Compute the histogram !!
         histograms = {}
         color = ('b', 'g', 'r')
         for i, col in enumerate(color):
-            histograms[col] = cv2.calcHist([image], [i], None, [256], [0, 256])
+            hist = cv2.calcHist([image], [i], None, [256], [0, 256])
+            histograms[col] = hist / hist.sum()  # Normalize the histogram
         
         return histograms
 
@@ -62,7 +65,7 @@ class HISTOGRAM_WRAPPER:
         if images is None:
             raise ValueError("Input tensor is None")
         # Ensure the input tensor is of type float
-        print(type(images))
+        # print(type(images))
         images = images.float()
         
         # images: Tensor of shape (N, 3, 128, 128)
@@ -78,6 +81,34 @@ class HISTOGRAM_WRAPPER:
 
         return torch.stack(histograms)
 
+    def get_color_histogram_tensor_from_single_image(self, image):
+        """
+        Get the color histogram of an image as an embedding in a tensor.
+        
+        Args:
+            image (PIL.Image.Image or str): The input image or path to the input image.
+        
+        Returns:
+            tf.Tensor: A tensor containing the color histogram embedding.
+        """
+        # Check if the input is a path or a PIL Image object
+        if isinstance(image, str):
+            # Load the image from the path
+            image = Image.open(image)
+        
+        # Convert PIL Image to numpy array
+        image = np.array(image)
+        
+        # Compute the histogram
+        histograms = self.compute_histogram(image)
+        
+        # Concatenate histograms into a single array
+        histogram_array = np.concatenate([histograms['b'], histograms['g'], histograms['r']]).flatten()
+        
+        # Convert the array to a tensor
+        histogram_tensor = tf.convert_to_tensor(histogram_array, dtype=tf.float32)
+        
+        return histogram_tensor
 
 
 

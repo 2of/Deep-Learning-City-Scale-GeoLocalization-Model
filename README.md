@@ -236,4 +236,5 @@ TODO: FINISH THIS
 https://www.kaggle.com/datasets/andrewmvd/road-sign-detection?resource=download
 for trainign yolo for this
 
-
+# for the other bits
+https://storage.googleapis.com/openimages/web/download_v7.html

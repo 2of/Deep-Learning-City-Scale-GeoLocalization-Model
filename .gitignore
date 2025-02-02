@@ -9,3 +9,7 @@ datasets/
 runs/
 downloads/
 downloaded_images/
+envs
+Models
+logs
+embedded_datasets

@@ -1,0 +1,21 @@
+digraph {
+	text_embeddings [label="Text Embeddings"]
+	color_histograms [label="Color Histograms"]
+	reshape [label=Reshape]
+	concat [label=Concatenate]
+	conv1 [label="Conv2D (64 filters)"]
+	conv2 [label="Conv2D (128 filters)"]
+	flatten [label=Flatten]
+	dense1 [label="Dense (256 units)"]
+	dense2 [label="Dense (128 units)"]
+	output_layer [label="Output Layer (2 units)"]
+	text_embeddings -> reshape
+	color_histograms -> reshape
+	reshape -> concat
+	concat -> conv1
+	conv1 -> conv2
+	conv2 -> flatten
+	flatten -> dense1
+	dense1 -> dense2
+	dense2 -> output_layer
+}

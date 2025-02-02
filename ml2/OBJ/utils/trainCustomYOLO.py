@@ -1,13 +1,22 @@
 from ultralytics import YOLO
+import torch
 
-# Load a pretrained model
+# Enable CUDA Launch Blocking for better error messages
+import os
+# os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+# os.environ['TORCH_USE_CUDA_DSA'] = '1'
+
+
 model = YOLO('yolo11n.pt')  # load a pretrained model
 
-# Fine-tune the model with some transfer elarning yaddayadda
-results = model.train(data='./datasets/large_signs_bb/data.yaml', epochs=100)  # train the model with your dataset
-results = model.val()  # evaluate model performance on the validation set
+# Print model summary
+print(model)
 
-# Save the trained model to a file
-model.save('trained_model.pt')
+try:
+    results = model.train(data='./datasets/yolo2/onlytrafficlights/data.yaml', epochs=50)  # train the model with your dataset
+except RuntimeError as e:
+    print(f"RuntimeError during training: {e}")
 
-print("Model training complete and saved as 'trained_model_100.pt'.")
+model.save('TLIGHTS.pt')
+
+print("Model training complete and saved as 'obj_detection_1.pt'.")

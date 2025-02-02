@@ -1,0 +1,27 @@
+digraph {
+	text_embeddings [label="Text Embeddings
+(12x128)" color=lightblue shape=box style=filled]
+	color_histograms [label="Color Histograms
+(3x256)" color=lightgreen shape=box style=filled]
+	reshape [label="Reshape
+(2x128)" color=lightyellow shape=box style=filled]
+	concat [label="Concatenate
+(14x128)" color=lightcoral shape=box style=filled]
+	conv1 [label="Conv2D (64 filters)" color=lightpink shape=box style=filled]
+	conv2 [label="Conv2D (128 filters)" color=lightcyan shape=box style=filled]
+	flatten [label=Flatten color=lightgrey shape=box style=filled]
+	dense1 [label="Dense (256 units)" color=lightsalmon shape=box style=filled]
+	dense2 [label="Dense (128 units)" color=lightgoldenrodyellow shape=box style=filled]
+	output_layer [label="Output Layer (2 units)" color=lightsteelblue shape=box style=filled]
+	text_embeddings -> reshape
+	color_histograms -> reshape
+	reshape -> concat
+	concat -> conv1
+	conv1 -> conv2
+	conv2 -> flatten
+	flatten -> dense1
+	dense1 -> dense2
+	dense2 -> output_layer
+	rankdir=LR
+	size="10,10"
+}

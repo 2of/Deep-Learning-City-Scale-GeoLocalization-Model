@@ -1,0 +1,185 @@
+'''
+schema:
+
+signs: 1-138
+traffic lights: 139
+crossing: 30,
+street lamp: 31
+hydrant: 32
+'''
+
+'''
+data lots:
+signs (new)
+    -classes 0-77
+    - test 408
+    - train 8067
+    - valid 941
+
+    
+        cite { 
+        
+        @misc{
+                            final-zn0tm_dataset,
+                            title = { FINAL Dataset },
+                            type = { Open Source Dataset },
+                            author = { epit },
+                            howpublished = { \url{ https://universe.roboflow.com/epit/final-zn0tm } },
+                            url = { https://universe.roboflow.com/epit/final-zn0tm },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2024 },
+                            month = { nov },
+                            note = { visited on 2025-01-15 },
+                            }
+                            
+        }
+        
+        
+crosswalks 
+    classes 78
+    -test 516
+    -train 2086
+    -valid 545
+    cite { 
+    @misc{
+                            zebracrossing-g9vao-y5kkw_dataset,
+                            title = { zebracrossing Dataset },
+                            type = { Open Source Dataset },
+                            author = { dwz },
+                            howpublished = { \url{ https://universe.roboflow.com/dwz/zebracrossing-g9vao-y5kkw } },
+                            url = { https://universe.roboflow.com/dwz/zebracrossing-g9vao-y5kkw },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2024 },
+                            month = { dec },
+                            note = { visited on 2025-01-15 },
+                            }
+    }
+    
+    hydrants
+    classes:79
+    -test 516
+    -train 2086
+    -val 545
+
+    cite { 
+    @misc{
+                            fh-3x3_dataset,
+                            title = { fh-3x3 Dataset },
+                            type = { Open Source Dataset },
+                            author = { Four },
+                            howpublished = { \url{ https://universe.roboflow.com/four-yylyu/fh-3x3 } },
+                            url = { https://universe.roboflow.com/four-yylyu/fh-3x3 },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2023 },
+                            month = { aug },
+                            note = { visited on 2025-01-15 },
+                            }
+    }
+    
+    streetlamps 
+    classes: 80
+    -test 127
+    -train 1089
+    -val 137
+    cite { 
+    @misc{
+                            street-lamps-dpeqc_dataset,
+                            title = { street lamps Dataset },
+                            type = { Open Source Dataset },
+                            author = { street lamps },
+                            howpublished = { \url{ https://universe.roboflow.com/street-lamps/street-lamps-dpeqc } },
+                            url = { https://universe.roboflow.com/street-lamps/street-lamps-dpeqc },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2023 },
+                            month = { dec },
+                            note = { visited on 2025-01-15 },
+                            }
+    }
+    
+    
+    traffic lights
+    classes: 81
+    -test 176
+    -train 1111
+    -val 200
+    
+    cite {
+        @misc{
+                            traffic-light-1cygo-bvchu-9lvz5-jrmw5_dataset,
+                            title = { Traffic Light Dataset },
+                            type = { Open Source Dataset },
+                            author = { Om Patil },
+                            howpublished = { \url{ https://universe.roboflow.com/om-patil-zjsro/traffic-light-1cygo-bvchu-9lvz5-jrmw5 } },
+                            url = { https://universe.roboflow.com/om-patil-zjsro/traffic-light-1cygo-bvchu-9lvz5-jrmw5 },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2024 },
+                            month = { dec },
+                            note = { visited on 2025-01-15 },
+                            }
+        }
+    
+''''
+
+
+
+
+
+
+
+
+
+
+--- MODEL 1:
+HYDRANTS
+Validating runs/detect/train45/weights/best.pt...
+Ultralytics 8.3.61 🚀 Python-3.12.3 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 3080, 10007MiB)
+YOLO11n summary (fused): 238 layers, 2,582,347 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 9/9 [00:01<00:00,  6.84it/s]
+                   all        275        274      0.989          1      0.989      0.708
+Speed: 0.2ms preprocess, 1.1ms inference, 0.0ms loss, 1.1ms postprocess per image
+Results saved to runs/detect/train45
+
+
+streetlamps
+Optimizer stripped from runs/detect/train46/weights/best.pt, 5.5MB
+
+Validating runs/detect/train46/weights/best.pt...
+Ultralytics 8.3.61 🚀 Python-3.12.3 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 3080, 10007MiB)
+YOLO11n summary (fused): 238 layers, 2,582,347 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00, 15.36it/s]
+                   all         37         41      0.832      0.847      0.893      0.621
+Speed: 0.3ms preprocess, 1.0ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to runs/detect/train46
+
+
+
+traffiligcht
+Validating runs/detect/train47/weights/best.pt...
+Ultralytics 8.3.61 🚀 Python-3.12.3 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 3080, 10007MiB)
+YOLO11n summary (fused): 238 layers, 2,619,166 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 7/7 [00:01<00:00,  6.16it/s]
+                   all        200        250          1      0.964      0.985      0.719
+              Hospital        200        250          1      0.964      0.985      0.719
+Speed: 0.2ms preprocess, 0.9ms inference, 0.0ms loss, 1.8ms postprocess per image
+Results saved to runs/detect/train47
+
+
+corssings:
+
+
+
+
+
+names: {0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 
+'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 
+'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella',
+ 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 
+ 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange',
+  50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv',
+   63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase'
+   , 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}

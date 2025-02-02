@@ -6,7 +6,7 @@ import sys
 BATCH = 200
 
 # Path to the .pkl file
-file_path = './data/GeoJSON/image_data_chicago.pkl'
+file_path = './filtered_chicago.pkl'
 
 # Load the DataFrame
 df = pd.read_pickle(file_path)
@@ -16,7 +16,7 @@ df = pd.read_pickle(file_path)
 with open('./KEYS.json', 'r') as key_file:
     keys = json.load(key_file)
     ACCESS_TOKEN = keys['mapillary']
-    SAVE_DIRECTORY = './downloaded_images'
+    SAVE_DIRECTORY = './downloaded_images/missing'
 
 
 def download_batch(batch_df, batch_num):
@@ -58,3 +58,12 @@ for i in range(num_rows // BATCH + (1 if num_rows % BATCH != 0 else 0)):  # Incl
     # if i >= 20:
     #     sys.exit()
 print("Processing complete.")
+
+# '''
+
+# from  17400  - to -  17600
+# Processing batch 89 with 200 rows.
+
+#  ended on 
+
+# '''
