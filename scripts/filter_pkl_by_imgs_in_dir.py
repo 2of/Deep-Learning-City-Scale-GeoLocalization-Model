@@ -15,17 +15,16 @@ def remove_missing_images(df, image_dir):
     df_filtered = df[df['id'].isin(existing_ids)]
     return df_filtered
 
-# Load the pickle file
+
 pickle_file = "./chicago.pkl"
 df = pd.read_pickle(pickle_file)
 
-# Directory containing the images
-image_dir = "./data/unseen_images/small"
+image_dir = "./DEMO"
 
-# Remove rows with missing images
+
 df_filtered = remove_missing_images(df, image_dir)
 
-# Save the filtered DataFrame back to a pickle file
+
 filtered_pickle_file = "./only_in_dir4.pkl"
 df_filtered.to_pickle(filtered_pickle_file)
 

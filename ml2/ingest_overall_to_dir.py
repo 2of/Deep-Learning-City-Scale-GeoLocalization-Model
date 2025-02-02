@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import argparse
 
 
-OUT_TF_RECORDS_DIR = "./data/tfrecords/UNSEEN"
-df = pd.read_pickle('./filtered_chicago.pkl')
+OUT_TF_RECORDS_DIR = "./DEMO_OUTPUT"
+df = pd.read_pickle('./only_in_dir4.pkl')
 
 HYDRANTS_CLASSES = {0: 1}
 CROSSINGS_CLASSES = {0: 0}
@@ -42,7 +42,7 @@ SAMPLE_IMG_PATH = "./sample_data/samplestreetviews/chicago.png"
 
 
 
-PATH_TO_DATA = "/home/noahk/Desktop/chicago_second_missed"
+# PATH_TO_DATA = "/home/noahk/Desktop/chicago_second_missed"
 
 
 
@@ -247,8 +247,8 @@ def main(batch_size):
 
             colour_embedding = HIST.get_color_histogram_tensor(image)
 
-            # print("THESE ARE THE OUTPUT TENSORS")
-            # print(text)
+            print("THESE ARE THE OUTPUT TENSORS")
+            print(text)
             # print(stacked_class_names_vector)
             # # print(stacked_class_names_vector.shape)
             # # print(stacked_bboxes.shape)

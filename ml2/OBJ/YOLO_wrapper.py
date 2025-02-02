@@ -18,7 +18,7 @@ class YOLOWrapper:
         self.class_names = self.model.names
         
         self.labels = ["dog", "banana", "horse"] #sample
-    def predict(self, image, andshow=False, andshowfromBB=True):
+    def predict(self, image, andshow=True, andshowfromBB=True):
         transform = T.Compose([T.ToTensor()]) 
         image_tensor = transform(image).unsqueeze(0)
         
@@ -51,7 +51,7 @@ class YOLOWrapper:
         
         
         
-    def get_objects_and_labels(self, image, id=123):
+    def get_objects_and_labels(self, image, id=123,andshow = True):
         transform = T.Compose([T.ToTensor()]) 
         image_tensor = transform(image).unsqueeze(0)
 
@@ -66,9 +66,10 @@ class YOLOWrapper:
 
         # results = self.model(image_tensor)
         results = self.model(image_tensor, conf=self.conf_threshold)
+        # print(results)
         # Print the number of items detected
         num_detections = len(results[0].boxes)
-        # print(f"Number of items detected: {num_detections}")
+        print(f"Number of items detected: {num_detections}")
         if num_detections == 0: 
             return (None, None, None)
         # Get bounding boxes and labels from YOLO model
@@ -85,6 +86,13 @@ class YOLOWrapper:
 
         # Compute the distance matrix
         distance_matrix = self.calculate_distance_matrix(centers)
+        if andshow:
+            for box in bounding_boxes:
+                cropped_image = self.cut_out_boundingbox(image_tensor.squeeze(0), box)
+                padded_image = self.pad_and_resize(cropped_image, (128, 128))
+                plt.imshow(padded_image.permute(1, 2, 0).cpu().numpy())
+                plt.show()
+                
 
         return padded_images_tensor, labels_tensor, distance_matrix
 

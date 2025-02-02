@@ -13,7 +13,7 @@ class YOLO_OBJ_Wrapper:
         self.class_names = self.model.names
         # self.print_class_names()  # Print class names upon initialization to verify
 
-    def predict(self, image, andshow=False, and_print_labels=False):
+    def predict(self, image, andshow=True, and_print_labels=False):
         # Perform prediction
         results = self.model(image)
         

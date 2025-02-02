@@ -25,17 +25,20 @@ This DOES NOT ingest the dataset for the overall image profile
 
 OUT_TF_RECORDS_DIR = "./data/tfrecords/fivetwelv_second/"
 # df = pd.read_pickle('./chicago.pkl')
-df = pd.read_pickle('./filtered_chicago.pkl')
+# df = pd.read_pickle('./filtered_chicago.pkl')
 print("LOADED DF ")
-print(df)
+# print(df)
 BATCH_SIZE = 512
 YOLO = YOLOWrapper(model_path="./models/billboardsoly100epoch.pt")
 EOCR = EasyOCRWrapper()
 HIST = HISTOGRAM_WRAPPER()
+OUT_TF_RECORDS_DIR = "./DEMO_OUTPUT"
+df = pd.read_pickle('./only_in_dir4.pkl')
+
+
+
+
 PATH_TO_DATA = "/home/noahk/Desktop/CompleteDataset"
-
-PATH_TO_DATA = "/home/noahk/Desktop/chicago_second_missed"
-
 
 def read_pkl_as_dataframe(file_path):
     try:
@@ -132,7 +135,7 @@ def main(batch_size):
             with open(file_path, 'rb') as file:
                 img = Image.open(io.BytesIO(file.read()))
                 localfeatures, labels_tensor, distance_matrix = YOLO.get_objects_and_labels(img)
-
+                # print(localfeatures)
                 if localfeatures is not None:
                     text, text_embeddings = EOCR.predict_and_embed_from_group_as_tensor(tensor_of_images=localfeatures)
                     segment_colour_embeds = HIST.get_color_histogram_tensor_stack(localfeatures)
