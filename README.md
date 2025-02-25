@@ -1,6 +1,21 @@
-# 🌍 City-scale Geolocation from Street-Level Images using Attention Nets, Object Localization, Colour-Space Embeddings, and Text Extraction 🚀
+# 🌍 City-Scale Geolocation from Street-Level Images
 
-Welcome to the **Capstone MAI Project** for the **University of Canterbury (2024-2025)**! 🎓 This repo is all about building a *GeoGuessr Bot*... but a supercharged, AI-powered version. More on that in the business section. 📍
+### Using Attention Nets, Object Localization, Colour-Space Embeddings & Text Extraction 🚀
+
+Welcome to the repository for my **Capstone Project** as part of the **Master of Artificial Intelligence** at the [University of Canterbury](https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-artificial-intelligence#accordion-3422d1b02a-item-bb8aa0463d-button).
+
+## 📌 Project Overview
+
+This fully self-directed project focuses on building a **multi-neighbourhood-scale GeoLocalization model**, capable of pinpointing locations from street-level imagery. To achieve this, I implemented a **pseudo-ensemble of machine learning models** trained on a **150,000-image dataset**, covering a **20 km²** urban area.
+<p align="center"> 
+  <img src="./docs/gitembeds/header1.png" width="200" height="200" /> 
+  <img src="./docs/gitembeds/thinking.gif" width="200" height="200" /> 
+  <img src="./docs/gitembeds/springfield_w_point.jpg" width="200" height="200" /> 
+</p> 
+
+
+
+## 🎓 The PDF's
 
 <p align="center">
   <a href="https://github.com/2of/Deep-Learning-City-Scale-GeoLocalization-Model/blob/main/proposal.pdf" style="text-decoration: none; font-size: 2rem;">
@@ -11,14 +26,36 @@ Welcome to the **Capstone MAI Project** for the **University of Canterbury (2024
   </a>
 </p>
 
-<p align="center"> 
-  <img src="./docs/gitembeds/header1.png" width="200" height="200" /> 
-  <img src="./docs/gitembeds/thinking.gif" width="200" height="200" /> 
-  <img src="./docs/gitembeds/springfield_w_point.jpg" width="200" height="200" /> 
-</p> 
+
+## 🚀 Overview
+
+- **Average Localization Error:** ~1.3 km
+- **Candidate Area:** ~20 km^2
+- **Dataset Size:** 150k+ images, 383k+ individual sign detections
+- **Core Techniques Used:**
+  - 🧠 **Attention-based Neural Networks** for feature learning
+  - 🎯 **Object Localization / Detection** Fine tuned existing object detection models for detecting *GeoInformers*  
+  - 🎨 **Colour-Space Embeddings** for scene analysis and getting a grip on the colourspace of signs and overall scenes
+  - 🔍 **Text Extraction** from street signs and overall images
+  - **Clustering Analysis** for validating, helping our ensemble models... 
+
+## 🏆 Why This Matters
+
+City-scale geolocation has diverse applications, including:
+
+- **Augmenting navigation systems** with better landmark recognition
+- **Enhancing autonomous vehicle localization** in urban environments
+- **Improving local search accuracy** for mapping services
+
+
+## 📓What does Google Notebook LM say about our paper:
+*This research explores a novel method for geolocating street-level images using machine learning. The core concept involves extracting key features from images – text, objects and colour information – and using these to train neural networks. Different machine learning models were employed, including those incorporating attention mechanisms, to predict the location of an image within a limited geographical area. The effectiveness of these models was assessed, considering how factors such as data density and feature selection impact location accuracy. The outcomes reveal the potential and challenges of using image-based features for precise geolocation. The project successfully geolocates signs using sign-based features while still acknowledging the work required to generalise the outcomes.*
+
 
 
 ### Graded: A
+
+
 
 ## 📚 Table of Contents
 - [Background](#background)
