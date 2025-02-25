@@ -2,15 +2,23 @@
 
 Welcome to the **Capstone MAI Project** for the **University of Canterbury (2024-2025)**! 🎓 This repo is all about building a *GeoGuessr Bot*... but a supercharged, AI-powered version. More on that in the business section. 📍
 
-
-#### ⚡️ This README will be updated as the model is finalized. ⚡️
+<p align="center">
+  <a href="https://github.com/2of/Deep-Learning-City-Scale-GeoLocalization-Model/blob/main/proposal.pdf" style="text-decoration: none; font-size: 2rem;">
+    🚀 <strong>Proposal.pdf</strong>
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/2of/Deep-Learning-City-Scale-GeoLocalization-Model/blob/main/THESIS_mini.pdf" style="text-decoration: none; font-size: 2rem;">
+    🔥 <strong>Thesis.pdf</strong>
+  </a>
+</p>
 
 <p align="center"> 
   <img src="./docs/gitembeds/header1.png" width="200" height="200" /> 
   <img src="./docs/gitembeds/thinking.gif" width="200" height="200" /> 
   <img src="./docs/gitembeds/springfield_w_point.jpg" width="200" height="200" /> 
 </p> 
-<p align="center"><em>Image Features -> NN Model -> Output Location</em></p>
+
+
+### Graded: A
 
 ## 📚 Table of Contents
 - [Background](#background)
